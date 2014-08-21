@@ -308,6 +308,7 @@ div#product-list-container div.product-item-container div.product-item-container
     margin: $iluria.layout.product.thumb.margin;
 }
 .iluria-layout-search-product-title {
+    font-family: 'Homemade Apple';
     margin-top: 10px;
     font-size: $iluria.layout.product.thumb.title.font.size;
     font-style: $iluria.layout.product.thumb.title.font.style;
