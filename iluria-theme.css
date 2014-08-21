@@ -1226,10 +1226,6 @@ div#product-list-container div.product-item-container div.product-item-container
 }
 
 
-.cart {
-    border: 3px $iluria.layout.cart.container.border.color solid;
-}
-
 .iluria-cart-title {
     display: block;
     font-size: $iluria.layout.cart.title.font.size;
