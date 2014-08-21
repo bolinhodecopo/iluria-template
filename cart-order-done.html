@@ -1,0 +1,43 @@
+<iluria.include>head-begin.html</iluria.include>
+<title>$iluria.shop.name</title>
+<iluria.include>head-end.html</iluria.include>
+<iluria.include>body-begin.html</iluria.include>
+
+<!-- Este arquivo é carregado no final do processo da compra -->
+<!-- Deve ser configurado no Pagseguro, Paypal etc. a URL de retorno apontando para este arquivo -->
+
+<div class="cart-container">
+    
+    <table width="100%" height="450" cellpadding="0" cellspacing="0">
+        <tr valign="middle" align="center">
+            <td>
+                <div class="iluria-page-content">
+                    Seu pedido $iluria.order.id no valor de R$ $iluria.order.total.formatted foi recebido com sucesso.
+                    <br><br>
+                    <a href="javascript: Iluria.clientAccount.showClientAccountForm();">Clique aqui</a> para acompanhar seu pedido.
+                
+	                <!-- Quando o pagamento é por depósito -->
+	                <iluria.if.payment.order.is.transfer>
+	                    <div>
+	                        <br>Instruções para depósito bancário: <br><br>
+	                        $iluria.order.payment.instructions
+	                    </div>
+	                </iluria.if.payment.order.is.transfer>
+	                
+	                <!-- Selo do E-Bit -->
+	                <div class="ebit-banner">
+	                    <iluria.if.shop.ebit.enabled>
+	                        $iluria.ebit.banner.tag
+	                    </iluria.if.shop.ebit.enabled>
+	                </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<iluria.if.shop.has.conversion.tag>
+       $iluria.conversion.tag
+</iluria.if.shop.has.conversion.tag>
+
+<iluria.include>body-end.html</iluria.include>
